@@ -14,6 +14,6 @@ class Network
     end.compact.flatten
     characters.max_by do |character|
         character.salary
-    end
+    end.actor
   end
 end
