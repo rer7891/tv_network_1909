@@ -7,5 +7,13 @@ class Network
   end
   def add_show(shows)
     @shows << shows
-  end 
+  end
+  def highest_paid_actor
+    characters = @shows.map do |show|
+         show.characters
+    end.compact.flatten
+    characters.max_by do |character|
+        character.salary
+    end
+  end
 end
